@@ -31,8 +31,8 @@ def parse_arguments():
         '--model',
         type=str,
         default='yolo11n.pt',
-        choices=['yolo11n.pt', 'yolo11s.pt', 'yolo11m.pt', 
-                 'yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt'],
+        choices=['yolo11n.pt', 'yolo11s.pt', 'yolo11m.pt', 'yolo11l.pt', 'yolo11x.pt',
+                 'yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt', 'yolo8l.pt', 'yolo8x.pt'],
         help='Разные модельки по новизне и размеру'
     )
     parser.add_argument(

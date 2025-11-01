@@ -14,7 +14,7 @@ AVAILABLE_MODELS = {
 }
 
 # Модель по умолчанию
-DEFAULT_MODEL = 'yolo11n.pt'
+DEFAULT_MODEL = 'yolo11m.pt'
 
 # Порог уверенности по умолчанию (0.0 - 1.0)
 DEFAULT_CONFIDENCE_THRESHOLD = 0.5
