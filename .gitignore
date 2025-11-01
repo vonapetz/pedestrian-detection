@@ -1,2 +1,37 @@
+# Виртуальные окружения
+venv/
+env/
+.venv/
+.env
+
+# Файлы моделей (веса YOLO и другие)
 *.pt
-# output/
+*.pth
+*.h5
+*.onnx
+*.pb
+*.tflite
+
+# Видео и медиафайлы
+data/
+output/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.jpg
+*.jpeg
+*.png
+*.bmp
+
+# Кэш и системные файлы
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Логи и
