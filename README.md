@@ -40,7 +40,7 @@ python main.py --input data/crowd.mp4 --output output/result.mp4
 - `--device` — устройство для инференса (`cpu`, `cuda`)
 
 Например, для работы на GPU и большей точности:
-python main.py --input data/crowd.mp4 --model yolo11m.pt --confidence 0.6 --device cuda
+python main.py --input data/crowd.mp4 --output output/result.mp4 --model yolo11x.pt --confidence 0.6 --device cuda
 
 
 ## 📁 Структура проекта
@@ -72,5 +72,5 @@ python main.py --input data/crowd.mp4 --model yolo11m.pt --confidence 0.6 --devi
 
 ## 👨‍💻 Автор
 
-Ivan Stepanov
-Контакт: t.me/vanya_stepanov
+* Ivan Stepanov
+* tg: t.me/vanya_stepanov
