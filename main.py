@@ -48,6 +48,12 @@ def parse_arguments():
         choices=['cpu', 'cuda', '0', '1'],
         help='Устройство для запуска инференса'
     )
+    parser.add_argument(
+        '--imgsz',
+        type=int,
+        default=640,
+        help='Размер длинной стороны входного изображения для инференса (например, 1280)'
+    )
     
     return parser.parse_args()
 
@@ -69,7 +75,8 @@ def main():
     detector = PedestrianDetector(
         model_name=args.model,
         confidence_threshold=args.confidence,
-        device=args.device
+        device=args.device,
+        imgsz=args.imgsz
     )
     
     # Обработка видео

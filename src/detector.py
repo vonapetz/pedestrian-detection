@@ -21,25 +21,14 @@ class PedestrianDetector:
         self,
         model_name: str = 'yolo11n.pt',
         confidence_threshold: float = 0.5,
-        device: str = 'cpu'
+        device: str = 'cpu',
+        imgsz: int = 640,  # Новое поле — размер входного изображения
     ):
-        """
-        Инициализация детектора пешеходов.
-        
-        Аргументы:
-            model_name: имя файла весов модели YOLO
-            confidence_threshold: минимальный порог уверенности (0.0-1.0)
-            device: устройство для запуска инференса ('cpu', 'cuda', '0', '1')
-        """
-        # Загрузка предобученной модели YOLO
         self.model = YOLO(model_name)
         self.confidence_threshold = confidence_threshold
         self.device = device
-        
-        # Перемещение модели на указанное устройство
+        self.imgsz = imgsz
         self.model.to(device)
-        
-        # ID класса "person" в наборе данных COCO (всегда 0)
         self.person_class_id = 0
     
     def detect(self, frame: np.ndarray) -> List[Tuple]:
@@ -54,10 +43,11 @@ class PedestrianDetector:
         """
         # Выполнение инференса модели с фильтрацией только класса "person"
         results = self.model(
-            frame,
-            conf=self.confidence_threshold,
-            classes=[self.person_class_id],
-            verbose=False
+        frame,
+        conf=self.confidence_threshold,
+        classes=[self.person_class_id],
+        imgsz=self.imgsz,     # Увеличиваем размер входного кадра для инференса
+        verbose=False
         )
         
         detections = []
