@@ -45,22 +45,20 @@ python main.py --input data/crowd.mp4 --model yolo11m.pt --confidence 0.6 --devi
 
 ## 📁 Структура проекта
 
-pedestrian-detection/
-│
-├── README.md
-├── requirements.txt
-├── main.py
-├── config.py
-├── src/
-│ ├── init.py
-│ ├── detector.py
-│ ├── video_processor.py
-│ └── utils.py
-├── data/
-│ └── crowd.mp4
-└── output/
-└── result.mp4
-
+`pedestrian-detection/`
+*   `README.md`
+*   `requirements.txt`
+*   `main.py`
+*   `config.py`
+*   `src/`
+    *   `init.py`
+    *   `detector.py`
+    *   `video_processor.py`
+    *   `utils.py`
+*   `data/`
+    *   `crowd.mp4`
+*   `output/`
+*   `result.mp4`
 
 ## Пример вывода
 
