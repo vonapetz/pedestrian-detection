@@ -34,4 +34,17 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Логи и
+# Логи и отладка
+logs/
+*.log
+
+# Локальные конфигурации (если есть)
+config.local.py
+secrets.py
+.env
+
+# IDE / редакторы
+.vscode/
+.idea/
+*.swp
+*.swo
