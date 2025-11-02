@@ -41,7 +41,7 @@ python main.py --input data/crowd.mp4 --output output/result.mp4
 - `--imgsz` — устройство дл изменения размера входного изображения (по умолчанию `640`)
 
 Например, для работы на GPU и большей точности:
-python main.py --input data/crowd.mp4 --output output/result.mp4 --model yolo11x.pt --confidence 0.3 --device cuda --imgsz 1920
+python main.py --input data/crowd.mp4 --output output/result2.mp4 --model yolo11x.pt --confidence 0.8 --device cuda --imgsz 1920
 
 
 ## 📁 Структура проекта
@@ -53,7 +53,7 @@ python main.py --input data/crowd.mp4 --output output/result.mp4 --model yolo11x
 *   `config.py`
 *   `src/`
     *   `init.py`
-    *   `detector.py`
+    *   `detector.py
     *   `video_processor.py`
     *   `utils.py`
 *   `data/`
