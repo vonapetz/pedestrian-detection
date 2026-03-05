@@ -53,7 +53,7 @@ python main.py --input data/crowd.mp4 --output output/result2.mp4 --model yolo11
 *   `config.py`
 *   `src/`
     *   `init.py`
-    *   `detector.py
+    *   `detector.py`
     *   `video_processor.py`
     *   `utils.py`
 *   `data/`
